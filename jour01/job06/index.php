@@ -1,6 +1,9 @@
 <?php 
 function my_array_sort(array $arrayToSort, string $order) : array {
-    $length = count($arrayToSort);
+    $length = 0;
+    foreach ($arrayToSort as $element) {
+        $length++;
+    }
     if ($order == "ASC") {
         for ($i = 0; $i < $length - 1 ; $i++) {
             $minIndex = $i;

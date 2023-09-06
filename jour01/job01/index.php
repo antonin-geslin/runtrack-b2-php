@@ -1,7 +1,11 @@
 <?php 
 function my_str_search (string $needle, string $haystack) : int {
+    $length = 0;
+    while (isset($haystack[$length])) {
+        $length++;
+    }
     $counter = 0;
-    for ($i = 0; $i < strlen($haystack); $i++) {
+    for ($i = 0; $i < $length; $i++) {
         if ($haystack[$i] == $needle) {
             $counter+=1;
         }
